@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <style>
+        .bground{
+            background-color: rgb(218, 216, 216);
+            color: black;
+            border-style: outset;
+            height: 36%;
+            padding: 8px;
+            cursor: default;
+            width: 15%;
+        }
+        .textbox{
+            background-color: white;
+            text-align: right;
+            color: black;
+            border-style: none;
+            font-size: 100%;
+            font-weight: bold;
+            height: 0px;
+            padding: 6%;
+            margin: 0%;
+            cursor: text;
+            width: 80%;
+        }
+        button{
+            background-color: whitesmoke;
+            color: black;
+            padding: 10%;
+            font-size: 90%;
+            font-weight: bold;
+            margin: 0.7%;
+            cursor: pointer;
+            height: 3%;
+            width: 5%;
+        } 
+        button:hover{
+            background-color: gray;
+        }
+        .butt{
+            background-color: whitesmoke;
+            color: black;
+            padding: 10%;
+            font-size: 100%;
+            font-weight: bold;
+            margin: 1%;
+            cursor: pointer;
+            height: 3%;
+            width: 68%;
+        }   
+        .butt:hover{
+            background-color: rgb(113, 113, 230);
+        }
+    </style>
+    <body style="background-color: rgb(235, 211, 211);">
+        <center>
+            <h1>CALCULATOR</h1>
+            <div class="bground">
+                <input type="text" class="textbox"  id="tb1" placeholder="0">
+                <input type="text" class="textbox"  id="tb2" placeholder="0">
+                <p> </p>
+                <button onclick="tbox('7')">7</button>
+                <button onclick="tbox('8')">8</button>
+                <button onclick="tbox('9')">9</button>
+                <button onclick="operation('/')">/</button><br>
+                <button onclick="tbox('4')">4</button>
+                <button onclick="tbox('5')">5</button>
+                <button onclick="tbox('6')">6</button>
+                <button onclick="operation('*')">*</button><br>
+                <button onclick="tbox('1')">1</button>
+                <button onclick="tbox('2')">2</button>
+                <button onclick="tbox('3')">3</button>
+                <button onclick="operation('-')">-</button><br>
+                <button onclick="clr()">C</button>
+                <button onclick="tbox('0')">0</button>
+                <button onclick="operation('+')">+</button>
+                <button onclick="sqroot()">√</button>
+                <button onclick="dot()">.</button>
+                <input type="button" class="butt"  onclick="solve()" value="=">
+            </div>
+        </center>
+    </body>
+    <script>
+        function clr() {
+            document.getElementById('tb2').value = "";
+            document.getElementById('tb1').value = "";
+        }
+        function tbox(val) {
+
+            document.getElementById("tb2").value += val;         
+        }
+        function operation(sign) {
+            var n = document.getElementById("tb2").value;
+            if(n!=""){
+                console.log(sign);
+                document.getElementById("tb1").value += n + sign;
+                var m = document.getElementById("tb2").value = "";
+                console.log(m);
+            }
+            return;           
+
+        }
+        function sqroot() {
+            var a = document.getElementById("tb2").value;
+            var b = document.getElementById("tb1").value + a;
+            var c = eval(b);
+            console.log(c);
+            var d = Math.sqrt(c);
+            document.getElementById("tb1").value = "";
+            document.getElementById('tb2').value = d;
+        }
+        function solve() {
+            var x = document.getElementById("tb2").value;
+            var z = document.getElementById("tb1").value += x ; 
+            console.log(z);
+            var y = eval(z);
+            document.getElementById("tb2").value = y;
+            document.getElementById('tb1').value = "";
+        }
+        function dot() {
+            var i = parseFloat(document.getElementById("tb2").value+1);
+            var j = parseInt(document.getElementById("tb2").value+1);
+    
+            if(i==j){
+                document.getElementById("tb2").value += ".";
+            }
+            return;            
+        }
+    </script>
+</html>
+
+  

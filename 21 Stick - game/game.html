@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="sample.css"> -->
+    <title>21 STICK - GAME</title>
+</head>
+
+<body>
+    <center>
+        <h1>21-STICK - The game</h1>
+        <h5>Choose the number of sticks to be removed(1-4) and click ok to update and click for the computer's turn, who picks the last stick loses</h5>
+        <lable for="tb1">Your turn:</lable>
+        <input type="text" class="textbox" id="tb1" placeholder="0">
+        <lable for="tb2">Computer's turn:</lable>
+        <input type="text" class="textbox" id="tb2" disabled="true" placeholder="0">
+        <br><br>
+        <button onclick="ok()">OK</button>
+        <button onclick="ok1()">Click for computer's turn</button>
+        <br><br>
+        <label for="tb3">Remining sticks:</label>
+        <input type="text" class="textbox" id="tb3" disabled="true" value="21">
+        <br><br>
+        <input type="text" class="textbox" id="tb4" disabled="true" placeholder="All the best">
+        <p id="result"></p>
+
+    </center>
+    <script src="game.js"></script>
+</body>

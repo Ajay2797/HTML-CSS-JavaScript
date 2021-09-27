@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>Palindrome</title>
+    </head>
+    <body>
+        <script>
+            var str = prompt("Enter a input");
+            var n = str.length;
+            var i, palin = 0;
+            for( i = 0;i<n/2;i++ ){
+                if(str[i] == str[n-i-1]){
+                    palin++;
+                }
+            }
+            if(palin == i){
+                console.log("%s is palindrome", str);
+            }
+            else{
+                console.log("%s is not palindrome", str);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search data</title>
+</head>
+<style>
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+<body>
+    <label for="list">Choose the category:</label>
+    <select name="list" id="category">
+        <option value="all">All</option>
+        <option value="movie">Movie</option>
+        <option value="cast">Cast</option>
+        <option value="crew">Crew</option>
+        <option value="year">Year of release</option>
+    </select>
+    <br><br>
+    <input type="text" id="data" >
+    <button onclick="mySearch()">Search</button>
+    <br><br>
+    <table>
+        <tr>
+          <th>Movie</th>
+          <th>Cast</th>
+          <th>Crew</th>
+          <th>Year of release</th>
+        </tr>
+        <tr>
+          <td><span id ="movie"></span></td>
+          <td><span id ="cast"></span></td>
+          <td><span id ="crew"></span></td>
+          <td><span id ="year"></span></td>
+        </tr>
+      </table>
+      <h4>Add a movie:</h4>
+      <label for="movie">Movie:</label><input name="movie" type="text" id="inputmovie" ><br>
+      <label for="cast">Cast:</label><input name="cast" type="text" id="inputcast" ><br>
+      <label for="crew">Crew:</label><input name="crew" type="text" id="inputcrew" ><br>
+      <label for="year">Year of release:</label><input name="year" type="text" id="inputyear" ><br>
+      <button onclick="myAdd()">Add</button>
+      <script src="search data.js"></script>
+
+</body>
+</html>
